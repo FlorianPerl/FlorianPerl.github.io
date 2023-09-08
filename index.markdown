@@ -6,3 +6,7 @@ layout: home
 ---
 <script> console.log('----- script in a markdown file') </script>
 {% include header-scripts.html %}
+
+<a id="custom_event"> This is a conversion link </a>
+
+{% include optimizely-conversion.html %}

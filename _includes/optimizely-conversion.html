@@ -1,0 +1,28 @@
+<script>
+  // Find the anchor link by its ID
+  const anchorLink = document.getElementById('custom_event');
+</script>
+<script>
+  // Add a click event listener to the anchor link
+  anchorLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor link (e.g., navigating to a new page)
+    optimizelyConversion();
+    // If you want to navigate to another page or URL after executing your function, you can use window.location.href like this:
+    // window.location.href = 'https://example.com/newpage.html';
+  });
+
+  // Define your function
+  function optimizelyConversion() {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({
+      type: "event",
+      eventName: "custom_event",
+      tags: {
+        revenue: 0, // Optional in cents as integer (500 == $5.00)
+        value: 2.50 // Optional as float
+      }
+    });
+    alert('Optimizely conversion');
+  }
+
+</script>
