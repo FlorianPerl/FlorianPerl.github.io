@@ -5,3 +5,4 @@
 layout: home
 ---
 <script> console.log('----- script in a markdown file') </script>
+{% include header-scripts.html %}
