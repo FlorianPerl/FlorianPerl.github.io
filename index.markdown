@@ -4,3 +4,4 @@
 
 layout: home
 ---
+<script> console.log('----- script in a markdown file') </script>
